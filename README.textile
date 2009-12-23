@@ -1,0 +1,11 @@
+﻿.h1 RAPI4J - Implementation of the Microsoft Remote API (RAPI) for Java
+
+
+
+h2. WARNING
+
+This code is currently experimental.
+
+h2. License
+
+All code and examples are licensed under the Eclipse Public License version 1.0.
