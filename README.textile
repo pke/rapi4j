@@ -1,5 +1,13 @@
-﻿.h1 RAPI4J - Implementation of the Microsoft Remote API (RAPI) for Java
+﻿h1. RAPI4J - Implementation of the Microsoft Remote API (RAPI) for Java
 
+
+h2. Usage of Com4J
+
+Com4J is used to get notified about attached mobile devices.
+
+h2. Usage of JNA
+
+JNA is used to create a layer for the Win32 RAPI for Java. Its defined in the @com.microsoft.rapi.Rapi@ library interface.
 
 
 h2. WARNING
