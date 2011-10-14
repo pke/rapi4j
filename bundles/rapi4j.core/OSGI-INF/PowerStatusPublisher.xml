@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" modified="modified" name="rapi4j.PowerStatusMonitor">
+   <implementation class="rapi4j.internal.SystemPowerPublisher"/>
+   <reference cardinality="1..1" interface="rapi4j.ActiveSyncDevice" name="ActiveSyncDevice" policy="dynamic" bind="bind" unbind="unbind"/>
+   <reference cardinality="1..1" interface="org.osgi.service.event.EventAdmin" name="EventAdmin" policy="static"/>
+   <reference bind="bind" cardinality="1..n" interface="org.osgi.service.event.EventHandler" name="EventHandler" policy="dynamic" target="(&amp;(mon.monitorable.pid=rapi4j.PowerStatusMonitor)(event.topics=org/osgi/service/monitor))"/>
+</scr:component>

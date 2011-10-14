@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: rapi4j.examples.memmonitor
+Bundle-Version: 1.0.0.qualifier
+Bundle-ContactAddress: %Bundle-ContactAddress
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Category: %Bundle-Category
+Bundle-Description: %Bundle-Description
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Service-Component: OSGI-INF/MemoryMonitor.xml
+Import-Package: org.osgi.service.event;version="1.2.0"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="rapi4j.commands.device.DeviceCommands">
+   <implementation class="rapi4j.internal.commands.device.DeviceCommands"/>
+   <service>
+      <provide interface="org.eclipse.osgi.framework.console.CommandProvider"/>
+   </service>
+   <reference cardinality="1..1" interface="rapi4j.ActiveSyncDevice" name="ActiveSyncDevice" policy="static"/>
+   <reference cardinality="1..n" interface="org.eclipse.osgi.framework.console.action.CommandAction" name="CommandAction" policy="dynamic" target="(&amp;(action=*)(command=wince))"/>
+   <reference cardinality="0..1" interface="org.eclipse.osgi.service.localization.BundleLocalization" name="BundleLocalization" policy="static"/>
+</scr:component>

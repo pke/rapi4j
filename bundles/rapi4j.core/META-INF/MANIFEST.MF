@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: rapi4j.core
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: %Bundle-Vendor
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.sun.jna,
+ com.sun.jna.examples.win32,
+ com.sun.jna.ptr,
+ com.sun.jna.win32,
+ com4j,
+ org.osgi.framework,
+ org.osgi.service.component,
+ org.osgi.service.event
+Service-Component: OSGI-INF/ActiveSyncService.xml, OSGI-INF/EventProvider.xml, OSGI-INF/MemoryStatusProvider.xml, OSGI-INF/PowerStatusPublisher.xml, OSGI-INF/DeviceFactory.xml
+Export-Package: com.microsoft.rapi;version="1.0.0",
+ rapi4j;version="1.0.0"

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="rapi4j.examples.filesview.ui.OpenBrowserAdvisor">
+   <implementation class="rapi4j.ui.advisor.internal.Advisor"/>
+   <reference cardinality="1..1" interface="org.eclipse.ui.IWorkbench" name="IWorkbench" policy="dynamic" bind="bind"/>
+   <reference cardinality="1..1" interface="rapi4j.ActiveSyncDevice" name="ActiveSyncDevice" policy="dynamic" bind="bind"/>
+   <reference cardinality="1..1" interface="org.eclipse.core.runtime.IAdapterManager" name="IAdapterManager" policy="dynamic" bind="bind" unbind="unbind"/>
+</scr:component>

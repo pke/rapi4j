@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:rapi4j.ui.tools">
+         <command
+               commandId="rapi4j.ui.softreset.Command"
+               icon="icons/e16/control-power.png"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="osgi.services">
+                  <iterate
+                        operator="or">
+                     <equals
+                           value="rapi4j.ActiveSyncDevice">
+                     </equals>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="eu.wwuk.eclipse.extsvcs.core.InjectionFactory:rapi4j.ui.softreset.Command"
+            description="%command.description"
+            id="rapi4j.ui.softreset.Command"
+            name="%command.name">
+      </command>
+   </extension>
+   <extension
+         point="eu.wwuk.eclipse.extsvcs.core.injectedFactories">
+      <factory
+            class="rapi4j.ui.softreset.internal.ResetHandler"
+            id="rapi4j.ui.softreset.Command">
+         <reference
+               cardinality="single"
+               interface="rapi4j.ActiveSyncDevice">
+         </reference>
+      </factory>
+   </extension>
+
+</plugin>

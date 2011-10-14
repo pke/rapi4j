@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="rapi4j.examples.filesview.ui.MobileDevicesCategory"
+            name="Mobile Device">
+      </category>
+      <view
+            category="rapi4j.examples.filesview.ui.MobileDevicesCategory"
+            class="eu.wwuk.eclipse.extsvcs.core.InjectionFactory:rapi4j.examples.filesview.ui.Explorer"
+            icon="icons/e16/Folder.png"
+            id="rapi4j.examples.filesview.ui.Explorer"
+            name="Explorer"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="eu.wwuk.eclipse.extsvcs.core.injectedFactories">
+      <factory
+            class="rapi4j.examples.filesview.ui.internal.FileBrowser"
+            id="rapi4j.examples.filesview.ui.Explorer">
+         <reference
+               cardinality="single"
+               interface="rapi4j.ActiveSyncDevice">
+         </reference>
+      </factory>
+   </extension>
+   <extension point="rapi4j.ui.advisor.actions">
+      <command
+            command="org.eclipse.ui.views.showView(org.eclipse.ui.views.showView.viewId=rapi4j.examples.filesview.ui.Explorer)"
+            description="Shows the file browser with the files of this device."
+            label="Open file browser">
+      </command>
+   </extension>
+
+</plugin>

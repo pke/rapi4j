@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="rapi4j.examples.memmonitor">
+   <implementation class="rapi4j.examples.memmonitor.internal.MemoryMonitor"/>
+   <property name="event.topics" type="String">org/osgi/service/monitor</property>
+   <property name="mon.monitorable.pid" type="String" value="rapi4j.MemoryStatusMonitor"/>
+   <service>
+      <provide interface="org.osgi.service.event.EventHandler"/>
+   </service>
+   <property name="event.filter" type="String" value="(&amp;(mon.monitorable.pid=rapi4j.MemoryStatusMonitor)(event.topics=org/osgi/service/monitor))"/>
+</scr:component>

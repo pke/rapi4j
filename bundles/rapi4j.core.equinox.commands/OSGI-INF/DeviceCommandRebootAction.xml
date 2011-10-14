@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="rapi4j.commands.device.RebootAction">
+   <implementation class="rapi4j.internal.commands.device.DeviceCommandRebootAction"/>
+   <property name="action" type="String" value="reboot"/>
+   <property name="command" type="String" value="wince"/>
+   <reference bind="bindActiveSyncDevice" cardinality="1..1" interface="rapi4j.ActiveSyncDevice" name="ActiveSyncDevice" policy="dynamic"/>
+   <service>
+      <provide interface="org.eclipse.osgi.framework.console.action.CommandAction"/>
+   </service>
+</scr:component>

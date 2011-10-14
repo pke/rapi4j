@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:rapi4j.ui.status?after=additions">
+         <control
+               class="rapi4j.ui.powerstatus.internal.PowerStatusControlContribution"
+               id="rapi4j.ui.powerstatus.Icon">
+            <visibleWhen
+                  checkEnabled="false">
+               <and>
+                  <with variable="activeWorkbenchWindow">
+                     <test
+                           args="rapi4j.ui.powerstatus.ToggleStatusIconCommand"
+                           forcePluginActivation="true"
+                           property="org.eclipse.core.commands.toggle"
+                           value="true">
+                     </test>
+                  </with>
+                  <with
+                     variable="osgi.services">
+                  <iterate
+                        operator="or">
+                     <equals
+                           value="rapi4j.ActiveSyncDevice">
+                     </equals>
+                  </iterate>
+                </with>
+              </and>                
+            </visibleWhen>
+         </control>
+      </menuContribution>
+      <menuContribution
+            locationURI="menu:rapi4j.ui.tools?after=additions">
+         <command
+               commandId="rapi4j.ui.powerstatus.ToggleStatusIconCommand"
+               style="toggle">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.eclipse.core.commands.extender.ToggleCommandHandler"
+            id="rapi4j.ui.powerstatus.ToggleStatusIconCommand"
+            name="%command.name">
+         <state
+               class="org.eclipse.ui.handlers.RegistryToggleState:true"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+   </extension>
+
+</plugin>

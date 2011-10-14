@@ -1,0 +1,10 @@
+Debug/
+Release/
+*.ilk
+*.user
+ARMV4Dbg/
+ARMV4Rel/
+*.vco
+*.vcb
+*.ncb
+*.suo

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="rapi4j.commands.device.ListAction">
+   <implementation class="rapi4j.internal.commands.device.DeviceCommandListAction"/>
+   <property name="action" type="String">files
+list
+   </property>
+   <property name="command" type="String" value="wince"/>
+   <service>
+      <provide interface="org.eclipse.osgi.framework.console.action.CommandAction"/>
+   </service>
+   <reference bind="bindActiveSyncDevice" cardinality="1..1" interface="rapi4j.ActiveSyncDevice" name="ActiveSyncDevice" policy="dynamic"/>
+</scr:component>

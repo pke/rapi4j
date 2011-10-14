@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: rapi4j.core.equinox.commands
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: %Bundle-Vendor
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.microsoft.rapi;version="1.0.0",
+ com.sun.jna.examples.win32,
+ org.eclipse.osgi.framework.console,
+ org.eclipse.osgi.framework.console.action;version="1.0.0",
+ rapi4j;version="1.0.0"
+Service-Component: OSGI-INF/DccManCommandProvider.xml, OSGI-INF/DeviceCommandProvider.xml, OSGI-INF/DeviceCommandIdAction.xml, OSGI-INF/DeviceCommandListAction.xml, OSGI-INF/DeviceCommandRebootAction.xml, OSGI-INF/DccManSettingsAction.xml, OSGI-INF/DeviceCommandDelAction.xml 

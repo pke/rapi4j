@@ -1,0 +1,23 @@
+.svn
+
+# Eclipse workspace metadata
+.metadata
+
+# Eclipse compiler output
+bin/
+
+# MSDEV compiler output
+*.dll
+*.exe
+*.exp
+*.ilk
+*.lib
+*.ncb
+*.log
+*.pdb
+*.aps
+*.res
+*.suo
+*.vcproj.*.user
+[Dd]ebug
+[Rr]elease

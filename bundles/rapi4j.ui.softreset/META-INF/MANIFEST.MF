@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-Description: %Bundle-Description
+Bundle-SymbolicName: rapi4j.ui.softreset;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Import-Package: eu.wwuk.eclipse.extsvcs.core,
+ org.eclipse.core.commands,
+ rapi4j

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="rapi4j.commands.dccman.DccManCommands">
+   <implementation class="rapi4j.internal.commands.dccman.DccManCommands"/>
+   <service>
+      <provide interface="org.eclipse.osgi.framework.console.CommandProvider"/>
+   </service>
+   <reference cardinality="1..1" interface="com.microsoft.rapi.IDccMan" name="IDccMan" policy="static"/>
+   <reference cardinality="1..n" interface="org.eclipse.osgi.framework.console.action.CommandAction" name="CommandAction" policy="static" target="(command=dccman)"/>
+</scr:component>

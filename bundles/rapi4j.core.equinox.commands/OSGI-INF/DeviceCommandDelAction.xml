@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="rapi4j.commands.wince.DelAction">
+   <implementation class="rapi4j.internal.commands.device.DelAction"/>
+   <reference bind="bindActiveSyncDevice" cardinality="1..1" interface="rapi4j.ActiveSyncDevice" name="ActiveSyncDevice" policy="static"/>
+   <service>
+      <provide interface="org.eclipse.osgi.framework.console.action.CommandAction"/>
+   </service>
+   <property name="command" type="String" value="wince"/>
+   <property name="action" type="String" value="del"/>
+</scr:component>
